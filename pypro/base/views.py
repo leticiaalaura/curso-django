@@ -8,3 +8,5 @@ def home(request):
     return HttpResponse('Olá, Django!')
 
 
+def f():
+    ...
