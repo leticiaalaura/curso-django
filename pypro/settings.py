@@ -10,11 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os.path
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 from functools import partial
 from os import path
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 import dj_database_url
 from decouple import config, Csv
 
@@ -31,6 +31,7 @@ DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
+AUTH_USER_MODEL = 'base.User'
 
 # Application definition
 
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
+    'pypro.base',
 ]
 
 MIDDLEWARE = [
