@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'pypro.urls'
@@ -76,6 +77,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
+# Configuração Django Debug Toolbar
+
+INTERNAL_IPS=config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
