@@ -5,10 +5,10 @@
 {% block body %}
 	<div class="container">
 	<div class="row">
-		<div class="col-md-12"
-		    <h1 class="mt-4 mb-3">Video Aperitivo: Motivação</h1>
-			<iframe src="https://player.vimeo.com/video/722325795?h=e94dd0cf7e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="848" height="400" frameborder="0"
-					webkitallowfullscreen mozallowfullscreen allowfullscreen title="video.mp4"></iframe>
+		<div class="col-md-12">
+		    <h1 class="mt-4 mb-3">{{ video.titulo | default:"Faltando Título" }}</h1>
+			<iframe src="https://player.vimeo.com/video/{{ video.vimeo_id}}" width="848" height="400" frameborder="0"
+					webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 	</div>
 </div>

@@ -35,29 +35,7 @@
 
 {% block body %}{% endblock body %}
 
-<footer class="main-footer mt-5 pt-4 text-light">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h3>Entre em Contato</h3>
-				<adress>
-					+55 16 99150-0984
-					<br/>
-					<a href="mailto:leticiaalaura@gmail.com" class="text-light">leticiaalaura@gmail.com</a>
-				</adress>
-			</div>
-		</div>
-	</div>
-	<div class="rights pb-4"
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					{% now 'Y' %}Python Pro. Todos direitos reservados.
-				</div>
-			</div>
-		</div>
-	</div>
+{% include 'base/footer.html' with contato_email='leticiaalaura@gmail.com' only %}
 
-</footer>
-  </body>
+</body>
 </html>
