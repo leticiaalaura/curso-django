@@ -16,9 +16,8 @@ from os import path
 from pathlib import Path
 
 import dj_database_url
-from decouple import config, Csv
-
 import sentry_sdk
+from decouple import config, Csv
 from sentry_sdk.integrations.django import DjangoIntegration
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -50,6 +49,7 @@ INSTALLED_APPS = [
     'pypro.aperitivos',
     'pypro.modulos',
     'ordered_model',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
